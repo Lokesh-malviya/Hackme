@@ -1,187 +1,2318 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tenders</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-  <body>
-    
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Carousel</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tenders</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css">
+  <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <div class="sticky-top">
+    <header class="p-3 text-bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <ion-icon name="location-outline"></ion-icon>
+            <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="features" class="nav-link px-2 text-white">Features</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+              aria-label="Search">
+          </form>
+
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
           </div>
         </div>
-      </nav>
-    </header>
-    
-    <main>
-    
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-    
-            <div class="container">
-              <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-    
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Some representative placeholder content for the second slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-    
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
-                <p>Some representative placeholder content for the third slide of this carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    
-    
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-    
-      <div class="container marketing">
-    
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2 class="fw-normal">Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2 class="fw-normal">Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2 class="fw-normal">Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-    
-    
-        <!-- START THE FEATURETTES -->
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+    </header>
+
+    <!--1. Location
+2. Price
+3.Rating
+4. BSE,NSE
+You7:28 PM
+5.tunover
+6.Deadline-->
+
+    <div class="float">
+      <div class="row justify-content-center">
+        <div class="col-7">
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Places to be visited</button>
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Price</button>
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Rating</button>
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Listing</button>
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Turnover</button>
+          <button type="button" class="btn btn-outline-secondary"
+            style="padding-left : 15px;padding-right : 15px">Deadline</button>
+          <button type="button" class="btn btn-primary" style="width: 150px" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <ion-icon name="color-fill-outline"></ion-icon> Filter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4" style="float:right;width : 650px;margin-top : 10px">
+      <div class="card-body">
+        <h5 class="card-title">Most recent</h5>
+        <div class="tab-pane" id="v-pills-disabled">
+        
+
+        <div class="list-group w-auto">
+
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+              value="2" checked="">
+            <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
+              Star Marked
+            </div>
+            <ion-icon name="star" style="color:#FFB801;font-size:25px"></ion-icon>
+           
+
+
+          </a>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+              value="2.5" checked="">
+            <div class="opacity-50" style="width: 200px; margin-right: 196px; margin-left:5px">
+              favorite
+            </div>
+            <ion-icon name="star" style="color:#438FFD;font-size:25px"></ion-icon>
+            
+
+
+          </a>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+              value="4" checked="">
+            <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
+              Cost
+            </div>
+            <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
+            
+
+
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!-- Modal -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <form id="sub">
+        <div class="modal-content p-3">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title">Filter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
+          <div class="d-flex align-items-start m-3">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active m-2" id="v-pills-home-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">Location</button>
+              <button class="nav-link m-2" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                aria-selected="false">Rating</button>
+              <button class="nav-link m-2" id="v-pills-messages-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                aria-selected="false">Listing</button>
+              <button class="nav-link m-2" id="v-pills-settings-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                aria-selected="false">Turnover</button>
+              <button class="nav-link m-2" id="v-pills-settings-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                aria-selected="false">Deadline</button>
+            </div>
+
+            <div class="tab-content" id="v-pills-tabContent" style="margin-left : 20px;width: 559px;">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                aria-labelledby="v-pills-home-tab" tabindex="0">
+                <p class="lead">
+                  Choose your location
+                </p>
+                <div class="row g-3">
+                  <div class="col">
+                    <div class="input-group mb-3">
+
+                      <input type="text" class="form-control" placeholder="@ India" aria-label="Username"
+                        aria-describedby="basic-addon1" disabled>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="State" aria-label="Username"
+                        aria-describedby="basic-addon1" name="state" id="change">
+                    </div>
+                    <p class="h5">
+                      Popular States.
+                    </p>
+                    <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="button"
+                      aria-pressed="true" onclick=save()>Maharastra</button><button type="button"
+                      class="btn btn-outline-primary m-1" data-bs-toggle="button" aria-pressed="true">Rajasthan</button>
+                    <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="button"
+                      aria-pressed="true">Gujrat</button><button type="button" class="btn btn-outline-primary m-1"
+                      data-bs-toggle="button" aria-pressed="true">West Bengal</button><button type="button"
+                      class="btn btn-outline-primary m-1" data-bs-toggle="button" aria-pressed="true">M.P</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                tabindex="0">
+                <p class="lead">
+                  Rating
+                </p>
+
+                <div class="list-group w-auto">
+
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+                      value="2" checked="">
+                    <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
+                      Quality
+                    </div>
+                    <ion-icon name="star" style="color:#FFB801;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#FFB801;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+
+
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+                      value="2.5" checked="">
+                    <div class="opacity-50" style="width: 200px; margin-right: 192px; margin-left:5px">
+                      Durability
+                    </div>
+                    <ion-icon name="star" style="color:#438FFD;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#438FFD;font-size:25px"></ion-icon>
+                    <ion-icon name="star-half" style="color:#438FFD;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+
+
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
+                      value="4" checked="">
+                    <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
+                      Cost
+                    </div>
+                    <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
+                    <ion-icon name="star" style="color:#DBE3E6;font-size:25px"></ion-icon>
+
+
+                  </a>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                tabindex="0">
+                <p class="lead">
+                  Listing
+                </p>
+                <div class="list-group mx-0 w-auto">
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="BSE" checked="" name="listing">
+                    <span>
+                      BSE
+                      <small class="d-block text-muted">Company Should be listed in Bombay Stock Exchange</small>
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="NSE" name="listing">
+                    <span>
+                      NSE
+                      <small class="d-block text-muted">Company Should be listed in National Stock Exchange</small>
+                    </span>
+                  </label>
+
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                tabindex="0">
+
+                <p class="lead">
+                  Turnover
+                </p>
+                <div class="list-group mx-0 w-auto">
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="50" checked=""
+                      name="listGroupRadio" id="listGroupRadios1">
+                    <span>
+                      Below 50,000
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="50-80" checked="50-80"
+                      name="listGroupRadio" id="listGroupRadios1">
+                    <span>
+                      50,000 - 80,000
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="80-5000" name="listGroupRadio"
+                      id="listGroupRadios1">
+                    <span>
+                      80,000 - 50,00,000
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="5000-10000" name="listGroupRadio"
+                      id="listGroupRadios1">
+                    <span>
+                      50,00,000 - 10 crore
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="10000" name="listGroupRadio"
+                      id="listGroupRadios1">
+                    <span>
+                      Above 10 crore
+
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                tabindex="0"></div>
+            </div>
+
+          </div>
+          <div class="modal-footer border-top-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              style="border-radius: 5px;">Close</button>
+
+            <button type="submit" class="btn btn-outline-success" style="border-radius: 5px;" id="submit"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
+              </svg> Apply Filter</button>
           </div>
         </div>
+      </form>
+    </div>
+  </div>
+  <div class="container-sm">
+    <div id="cards">
+    </div>
+
+  </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDuIeybdRLhoBqIg3OaypzzUNFMbnrlq9o",
+      authDomain: "hackme-42c99.firebaseapp.com",
+      databaseURL: "https://hackme-42c99-default-rtdb.firebaseio.com",
+      projectId: "hackme-42c99",
+      storageBucket: "hackme-42c99.appspot.com",
+      messagingSenderId: "599101401140",
+      appId: "1:599101401140:web:ac6a3bfa21b1c06ce8c261",
+      measurementId: "G-7450JVPVVG"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+    import { getDatabase, ref, child, update, remove, get } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    const db = getDatabase();
+
+    function getdata() {
+      const dbref = ref(db);
+      get(child(dbref, "Tender/").then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val().Title);
+        }
+        else {
+          alert("No data found");
+        }
+      })
+        .catch((error) => {
+          alert("unknown error : " + error);
+        }));
+    }
+
+
+
+
+  </script>
+
+  <script>
+    var tables = [{
+      "Tender": [
+        {
+          "Title": "purchase of workstations (9 units)",
+          "Location": "Tamil Nadu, India",
+          "Price": "60 Thousand",
+          "Deadline": "Before1Days22-09-2022",
+          "key": 0,
+          "Like": 35,
+          "Dislike": 44
+        },
+        {
+          "Title": "providing of manpower- computer operator, security guard, sweeper. ( hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 1,
+          "Like": 58,
+          "Dislike": 75
+        },
+        {
+          "Title": "supply of nvr 32 ch , hard disk , camera , cat6 305 m , poe plus 16 giga unmanaged , poe plus full giga byte rack mount managed 8 port , spike metel with mcb , u rack 2 u , u rack 6 u , 2 by 2 db wap , installation , speaker , control unit , 3 core sheilded cable audio , power cable , installation of system , cat6 305 m per bundle , poe plus 8 port , 8 poe plus , firewall",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Crore",
+          "Deadline": "Before1Days22-09-2022",
+          "key": 2,
+          "Like": 46,
+          "Dislike": 91
+        },
+        {
+          "Title": "providing of catering service. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 3,
+          "Like": 88,
+          "Dislike": 65
+        },
+        {
+          "Title": "tender for purchase of library books : 1 text books (university and ncert publication) 2. text book of (commerce, physics, chemistry, computer science, maths, economics, geography, history, political science) 3. hindi (literature and fixtion) 4. english (literature and fiction) 5. general books 6. referance books 7. competitive books 8 government publications.",
+          "Location": "Haryana, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 4,
+          "Like": 87,
+          "Dislike": 91
+        },
+        {
+          "Title": "providing of food services of n.c.c. cadats. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 5,
+          "Like": 93,
+          "Dislike": 57
+        },
+        {
+          "Title": "contract of cycle stand, canteen, cleaning and maintenance work of sport ground. ( hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 6,
+          "Like": 55,
+          "Dislike": 40
+        },
+        {
+          "Title": "procurement procurement of 3d video development for laboratory virtual labs, uv-visspectrophotometerand projectors",
+          "Location": "Karnataka, India",
+          "Price": "20 Crore",
+          "Deadline": "Before3Days20-09-2022",
+          "key": 7,
+          "Like": 74,
+          "Dislike": 99
+        },
+        {
+          "Title": "auction sale of tree. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 8,
+          "Like": 85,
+          "Dislike": 82
+        },
+        {
+          "Title": "sale of student furniture, cots, chains, fans almirahs, sports goods & equipments, ac machines, laboratory equipments etc.",
+          "Location": "Orissa, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 9,
+          "Like": 80,
+          "Dislike": 44
+        },
+        {
+          "Title": "auction of un serviceable store stock items/ articles.",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 10,
+          "Like": 37,
+          "Dislike": 41
+        },
+        {
+          "Title": "supply of all in one pc. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 11,
+          "Like": 41,
+          "Dislike": 33
+        },
+        {
+          "Title": "supply of stationery items. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 12,
+          "Like": 35,
+          "Dislike": 55
+        },
+        {
+          "Title": "supply of stationery/writing item. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 13,
+          "Like": 48,
+          "Dislike": 74
+        },
+        {
+          "Title": "sale of answer sheet, omr and waste paper. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 14,
+          "Like": 72,
+          "Dislike": 40
+        },
+        {
+          "Title": "supply of hp all in one computer , hp laserjet pro m126nw , office almira , almira 6 locker , executive table , executive visitor chair , geografical apparatus , writing table top elevator desk , raised relif 3d model map , computor table , revolving chair",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Crore",
+          "Deadline": "Before6Days17-09-2022",
+          "key": 15,
+          "Like": 78,
+          "Dislike": 30
+        },
+        {
+          "Title": "upgradation of library. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 16,
+          "Like": 78,
+          "Dislike": 74
+        },
+        {
+          "Title": "supply of multifunction machines mfm",
+          "Location": "Madhya Pradesh, India",
+          "Price": "20 Crore",
+          "Deadline": "Before6Days17-09-2022",
+          "key": 17,
+          "Like": 63,
+          "Dislike": 89
+        },
+        {
+          "Title": "engagement of security personnel",
+          "Location": "West Bengal, India",
+          "Price": "80 Crore",
+          "Deadline": "Before6Days17-09-2022",
+          "key": 18,
+          "Like": 58,
+          "Dislike": 65
+        },
+        {
+          "Title": "repairing of ceiling fan & water cooler-principal i/c ,govt. college of nursing,",
+          "Location": "Orissa, India",
+          "Price": "50 Crore",
+          "Deadline": "Before6Days17-09-2022",
+          "key": 19,
+          "Like": 98,
+          "Dislike": 67
+        },
+        {
+          "Title": "upgradation of library. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 20,
+          "Like": 48,
+          "Dislike": 44
+        },
+        {
+          "Title": "supplying of painting material asian paints only including conveyance at gce",
+          "Location": "Maharashtra, India",
+          "Price": "20 Thousand",
+          "Deadline": "Before7Days16-09-2022",
+          "key": 21,
+          "Like": 91,
+          "Dislike": 68
+        },
+        {
+          "Title": "for college parking contract for session 2022-23.",
+          "Location": "Chandigarh, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 22,
+          "Like": 64,
+          "Dislike": 41
+        },
+        {
+          "Title": "auction sale of trees. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 23,
+          "Like": 93,
+          "Dislike": 84
+        },
+        {
+          "Title": "contract for running of canteen for educational session 2022-23 on monthly hire basis. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Crore",
+          "Deadline": "ReferDocument",
+          "key": 24,
+          "Like": 56,
+          "Dislike": 52
+        },
+        {
+          "Title": "supply of software, smart class, desktop, laptop, multi function printer, professional large formate display. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 25,
+          "Like": 88,
+          "Dislike": 36
+        },
+        {
+          "Title": "supply of furniture. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "70 Crore",
+          "Deadline": "ReferDocument",
+          "key": 26,
+          "Like": 83,
+          "Dislike": 34
+        },
+        {
+          "Title": "supply of software, smart class, desktop, laptop, a3 multifunction printer, professional large format display. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 27,
+          "Like": 73,
+          "Dislike": 89
+        },
+        {
+          "Title": "supply of furniture. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 28,
+          "Like": 68,
+          "Dislike": 38
+        },
+        {
+          "Title": "supply of furniture. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 29,
+          "Like": 70,
+          "Dislike": 90
+        },
+        {
+          "Title": "purchase/service of the following items/ heads-glassware and plastic ware, chemicals, biological specimens, boks and library automation.",
+          "Location": "West Bengal, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 30,
+          "Like": 40,
+          "Dislike": 40
+        },
+        {
+          "Title": "supply of chair , duel desk , hostel bed , computer table , lab stool , lab table , lab table with bottle rack , table with sink",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Thousand",
+          "Deadline": "Before8Days15-09-2022",
+          "key": 31,
+          "Like": 81,
+          "Dislike": 60
+        },
+        {
+          "Title": "mess operation work. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 32,
+          "Like": 46,
+          "Dislike": 34
+        },
+        {
+          "Title": "supply of sports items - sports uniform (t-shirt & shorts), tt ball, basketball, cricket bat, cricket leather ball, shuttlecock, hockey stick, shortput, disc, track suit, football goalpost, kabaddi mat, kho-kho pole, volleyball, air pump, ribbon, chess board, portable mic system etc. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 33,
+          "Like": 73,
+          "Dislike": 32
+        },
+        {
+          "Title": "supply of stationery - registration, ruf registr, scale, pencil, rubber, pen. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "40 Crore",
+          "Deadline": "ReferDocument",
+          "key": 34,
+          "Like": 75,
+          "Dislike": 69
+        },
+        {
+          "Title": "supply of book. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 35,
+          "Like": 67,
+          "Dislike": 50
+        },
+        {
+          "Title": "dismantling of building, class room and disposal of malba. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 36,
+          "Like": 43,
+          "Dislike": 32
+        },
+        {
+          "Title": "supply of auditorium chair",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Crore",
+          "Deadline": "Before9Days14-09-2022",
+          "key": 37,
+          "Like": 76,
+          "Dislike": 79
+        },
+        {
+          "Title": "quotation for inverter & battery",
+          "Location": "Maharashtra, India",
+          "Price": "30 Crore",
+          "Deadline": "Before10Days13-09-2022",
+          "key": 38,
+          "Like": 72,
+          "Dislike": 79
+        },
+        {
+          "Title": "operation of mess. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 39,
+          "Like": 63,
+          "Dislike": 42
+        },
+        {
+          "Title": "operation of mess. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 40,
+          "Like": 96,
+          "Dislike": 85
+        },
+        {
+          "Title": "sale of tree. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "40 Crore",
+          "Deadline": "ReferDocument",
+          "key": 41,
+          "Like": 36,
+          "Dislike": 83
+        },
+        {
+          "Title": "purchase of control and accessory",
+          "Location": "Maharashtra, India",
+          "Price": "50 Thousand",
+          "Deadline": "Before10Days13-09-2022",
+          "key": 42,
+          "Like": 79,
+          "Dislike": 66
+        },
+        {
+          "Title": "supply of inverter 1850va 01no battery 12v, 150ah",
+          "Location": "Maharashtra, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before10Days13-09-2022",
+          "key": 43,
+          "Like": 92,
+          "Dislike": 76
+        },
+        {
+          "Title": "dismantling of damaged building, removal of malba. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 44,
+          "Like": 85,
+          "Dislike": 32
+        },
+        {
+          "Title": "supply of stationery, sports material, printing work, camera installation, music instrument, sanitation material, (hindi image)",
+          "Location": "Chhattisgarh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 45,
+          "Like": 60,
+          "Dislike": 86
+        },
+        {
+          "Title": "supply of domestic refrigerators-is 1476",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before10Days13-09-2022",
+          "key": 46,
+          "Like": 30,
+          "Dislike": 38
+        },
+        {
+          "Title": "purchase of consumable items - dc and ac machines laboratory - copper wire (multi stand) 1.5 sqmm,1100v,12a, copper wire (multi stand) 2.5 sqmm,1100v,20a, copper wire (multi stand) 4sqmm,1100v,37a, copper wire (multi stand) silk wire, fuse wire with alloy of tin 15a, fuse wire with alloy of tin 30 a, fuse wire with alloy of tin 25 a, fuse wire with alloy of tin 5 a, terminal knob - red-4inch, panel,screw type, 250v 30a,20⁰c to +85⁰c, terminal knob - black-4inch, panel,screw type, 250v 30a,20⁰c t.....",
+          "Location": "Tamil Nadu, India",
+          "Price": "70 Thousand",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 47,
+          "Like": 84,
+          "Dislike": 38
+        },
+        {
+          "Title": "purchase of a3 type multifunctional copier machine",
+          "Location": "Tamil Nadu, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 48,
+          "Like": 76,
+          "Dislike": 82
+        },
+        {
+          "Title": "supply of sps supply of z440 525w 85% for hp workstaion.",
+          "Location": "Maharashtra, India",
+          "Price": "40 Crore",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 49,
+          "Like": 32,
+          "Dislike": 63
+        },
+        {
+          "Title": "quotation calling for dwt rim- my plit crew, asap hardware solutions, c2m, college website and notice board.",
+          "Location": "Maharashtra, India",
+          "Price": "30 Crore",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 50,
+          "Like": 69,
+          "Dislike": 58
+        },
+        {
+          "Title": "quotation for purchase of condensing system.",
+          "Location": "Maharashtra, India",
+          "Price": "20 Crore",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 51,
+          "Like": 73,
+          "Dislike": 89
+        },
+        {
+          "Title": "supply of calling for calibration of lab equipments_ compression testing machine 300 t.",
+          "Location": "Maharashtra, India",
+          "Price": "90 Thousand",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 52,
+          "Like": 45,
+          "Dislike": 33
+        },
+        {
+          "Title": "contract for fruit crops. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 53,
+          "Like": 72,
+          "Dislike": 78
+        },
+        {
+          "Title": "auction contract for dismantling of damaged building & removal of malba ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 54,
+          "Like": 76,
+          "Dislike": 99
+        },
+        {
+          "Title": "purchase of evaporating system",
+          "Location": "Maharashtra, India",
+          "Price": "30 Crore",
+          "Deadline": "Before11Days12-09-2022",
+          "key": 55,
+          "Like": 40,
+          "Dislike": 98
+        },
+        {
+          "Title": "dismantling of old building no i & ii. (hindi image)",
+          "Location": "Himachal Pradesh, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 56,
+          "Like": 54,
+          "Dislike": 59
+        },
+        {
+          "Title": "supply of stationery material. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 57,
+          "Like": 93,
+          "Dislike": 53
+        },
+        {
+          "Title": "providing of manpower service - computer operator, sweeper, assistant worker, etc through placement agency. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 58,
+          "Like": 65,
+          "Dislike": 56
+        },
+        {
+          "Title": "repair & painting of building. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 59,
+          "Like": 50,
+          "Dislike": 54
+        },
+        {
+          "Title": "purchase of textbooks & e-books (books including text, reference & e-books) for library. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 60,
+          "Like": 64,
+          "Dislike": 74
+        },
+        {
+          "Title": "removal of bushy kabil keekar from the root. (hindi image)",
+          "Location": "Haryana, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 61,
+          "Like": 81,
+          "Dislike": 65
+        },
+        {
+          "Title": "supply of multifunction machines mfm (q2) , desktop computers (q2) , projector",
+          "Location": "Rajasthan, India",
+          "Price": "60 Crore",
+          "Deadline": "Before14Days09-09-2022",
+          "key": 62,
+          "Like": 50,
+          "Dislike": 39
+        },
+        {
+          "Title": "intends to auction \"uprooting of scrubbed kikar\" located in the campus of govt. college jhajjar spread over an area of about 2 acre.",
+          "Location": "Haryana, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 63,
+          "Like": 59,
+          "Dislike": 86
+        },
+        {
+          "Title": "supply of water meter with calibration",
+          "Location": "Maharashtra, India",
+          "Price": "20 Thousand",
+          "Deadline": "Before14Days09-09-2022",
+          "key": 64,
+          "Like": 44,
+          "Dislike": 95
+        },
+        {
+          "Title": "contract of parking area of the college contract on prescribed proformas for the academic session 2022-23.",
+          "Location": "Chandigarh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 65,
+          "Like": 67,
+          "Dislike": 38
+        },
+        {
+          "Title": "supply of leg press - outdoor gym equipments",
+          "Location": "Haryana, India",
+          "Price": "80 Thousand",
+          "Deadline": "Before14Days09-09-2022",
+          "key": 66,
+          "Like": 32,
+          "Dislike": 53
+        },
+        {
+          "Title": "dismantling of building, class room, removal of malba. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "20 Crore",
+          "Deadline": "ReferDocument",
+          "key": 67,
+          "Like": 97,
+          "Dislike": 47
+        },
+        {
+          "Title": "supply of items water meter with calibration.",
+          "Location": "Maharashtra, India",
+          "Price": "90 Thousand",
+          "Deadline": "Before14Days09-09-2022",
+          "key": 68,
+          "Like": 34,
+          "Dislike": 39
+        },
+        {
+          "Title": "supply, installation, testing and training of botany, physics, zoology, chemistry and home science laboratory, equipment to above college.",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 69,
+          "Like": 98,
+          "Dislike": 84
+        },
+        {
+          "Title": "auction contract for dismantling of damaged building. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 70,
+          "Like": 50,
+          "Dislike": 88
+        },
+        {
+          "Title": "supply of materials, tools & equipment for college. (hindi image)",
+          "Location": "Bihar, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 71,
+          "Like": 98,
+          "Dislike": 32
+        },
+        {
+          "Title": "supply of electronic balance , binocular microscope , compound microscope , dissecting microscpe , autoclave 45ltr , ph meter , water and soil testing kit , centrifuge machine 3500 rpm , vortex shaker , tlc kit , autoclave portable , heating mentle 1 ltr , colarimeter , water bath double wall , distillation 3 ltr , distillation 5 ltr , polarimeter , flamephotometer , kjedal digestion system , micro centrifuge , potentiometer , oven , gel electrophoresis , deonizer , paper chromotography kit , di.....",
+          "Location": "Madhya Pradesh, India",
+          "Price": "40 Crore",
+          "Deadline": "Before15Days08-09-2022",
+          "key": 72,
+          "Like": 38,
+          "Dislike": 66
+        },
+        {
+          "Title": "purchase of books. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 73,
+          "Like": 36,
+          "Dislike": 40
+        },
+        {
+          "Title": "supply of books. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 74,
+          "Like": 52,
+          "Dislike": 54
+        },
+        {
+          "Title": "supply of sports kit, dress & sports shoes. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 75,
+          "Like": 52,
+          "Dislike": 50
+        },
+        {
+          "Title": "supply of sports kit dress and sports shoes. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 76,
+          "Like": 70,
+          "Dislike": 30
+        },
+        {
+          "Title": "auction contract of canteen. ( hindi image)",
+          "Location": "Haryana, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 77,
+          "Like": 89,
+          "Dislike": 32
+        },
+        {
+          "Title": "repair of roof, paint putti, repair of electrical fitting, door, window, plumber pipe line, toiletry, aluminium partition work. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 78,
+          "Like": 74,
+          "Dislike": 33
+        },
+        {
+          "Title": "auction contract for dismantling of building and removal of debris. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "40 Crore",
+          "Deadline": "ReferDocument",
+          "key": 79,
+          "Like": 81,
+          "Dislike": 47
+        },
+        {
+          "Title": "auction contract for dismantling of building and removal of debris. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "20 Crore",
+          "Deadline": "ReferDocument",
+          "key": 80,
+          "Like": 40,
+          "Dislike": 62
+        },
+        {
+          "Title": "supply of barcode printer and scanner",
+          "Location": "West Bengal, India",
+          "Price": "70 Crore",
+          "Deadline": "Before17Days06-09-2022",
+          "key": 81,
+          "Like": 94,
+          "Dislike": 82
+        },
+        {
+          "Title": "supply of electronic balance , binocular microscope , compound microscope , dissecting microscpe , autoclave 45ltr , ph meter , water and soil testing kit , centrifuge machine 3500 rpm , vortex shaker , tlc kit , autoclave portable , heating mentle 1 ltr , colarimeter , water bath double wall , distillation 3 ltr , distillation 5 ltr , polarimeter , flamephotometer , kjedal digestion system , micro centrifuge , potentiometer , oven , gel electrophoresis , deonizer , paper chromotography kit , di.....",
+          "Location": "Madhya Pradesh, India",
+          "Price": "40 Thousand",
+          "Deadline": "Before17Days06-09-2022",
+          "key": 82,
+          "Like": 67,
+          "Dislike": 40
+        },
+        {
+          "Title": "supply of sport item- roller jogger, kho- kho pole, cricket bat, leather ball, batting gloves, batting pads, wicket keeping pads, wicket keeping gloves, football, volley ball, basket ball, badminton racket, shuttle cock, table tennis bat, hockey sticks, hockey sticks, lawn tennis racket, lawn tennis ball. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 83,
+          "Like": 43,
+          "Dislike": 44
+        },
+        {
+          "Title": "supply of stationery items. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 84,
+          "Like": 31,
+          "Dislike": 35
+        },
+        {
+          "Title": "supply of various sport materials. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 85,
+          "Like": 79,
+          "Dislike": 84
+        },
+        {
+          "Title": "supply of multifunction machines mfm",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Thousand",
+          "Deadline": "Before18Days05-09-2022",
+          "key": 86,
+          "Like": 65,
+          "Dislike": 81
+        },
+        {
+          "Title": "purchase of sports items - roller jogger (manual), kho-kho pole (wooden), cricket bat, kashmir willow, english willow, leather ball, batting gloves, batting pads, wicket keeping pads, wicket keeping gloves, football, volleyball, basketball, badminton racket, shuttle cock, table tennis bat, hockey sticks, lawn tennis racket, lawn tennis ball etc. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 87,
+          "Like": 32,
+          "Dislike": 72
+        },
+        {
+          "Title": "supply of interactive touch panel 7 inch with 4 k resolution, 6 kva online upspower back up to 1 hour rack, i5 all in one with 8 gb ram and 1tb hdd, web camera, smart podium with interactive touch display, english language lab software(21 user), full hd web camera, revolving chair, modular works station, cables networking switch and rack, electrical and misc work",
+          "Location": "Haryana, India",
+          "Price": "80 Crore",
+          "Deadline": "Before18Days05-09-2022",
+          "key": 88,
+          "Like": 75,
+          "Dislike": 48
+        },
+        {
+          "Title": "auction contract for dismantling of building. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 89,
+          "Like": 87,
+          "Dislike": 66
+        },
+        {
+          "Title": "supply of chassis piper.",
+          "Location": "Maharashtra, India",
+          "Price": "10 Crore",
+          "Deadline": "Before20Days03-09-2022",
+          "key": 90,
+          "Like": 67,
+          "Dislike": 37
+        },
+        {
+          "Title": "quotation for turbine flow meter.",
+          "Location": "Maharashtra, India",
+          "Price": "20 Crore",
+          "Deadline": "Before20Days03-09-2022",
+          "key": 91,
+          "Like": 98,
+          "Dislike": 99
+        },
+        {
+          "Title": "supply and installation of equipment and furniture from original manufacture or authorized dealers of the company and item for equipping & furnishing of new library complex, on two floors.",
+          "Location": "Jharkhand, India",
+          "Price": "20 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 92,
+          "Like": 48,
+          "Dislike": 86
+        },
+        {
+          "Title": "operation of hostel mess. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 93,
+          "Like": 71,
+          "Dislike": 84
+        },
+        {
+          "Title": "auction sale of iron, plastic & wooden waste items/scrap. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "20 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 94,
+          "Like": 47,
+          "Dislike": 68
+        },
+        {
+          "Title": "providing and painting wall with branded manufactures paint in interior wall applying two coats to give an enven shade and finish the work",
+          "Location": "Assam, India",
+          "Price": "90 Thousand",
+          "Deadline": "Before22Days01-09-2022",
+          "key": 95,
+          "Like": 91,
+          "Dislike": 51
+        },
+        {
+          "Title": "supply of identity card - holder with printed ribbon, laminated card",
+          "Location": "West Bengal, India",
+          "Price": "90 Thousand",
+          "Deadline": "Before22Days01-09-2022",
+          "key": 96,
+          "Like": 38,
+          "Dislike": 60
+        },
+        {
+          "Title": "supply of equipment to determine the coupling coefficient of a piezoelectric crystal. (voltage developed due to applied stress or strain developed due to applied voltage)",
+          "Location": "West Bengal, India",
+          "Price": "50 Crore",
+          "Deadline": "Before23Days31-08-2022",
+          "key": 97,
+          "Like": 72,
+          "Dislike": 87
+        },
+        {
+          "Title": "supply of stationery, books, sports material. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 98,
+          "Like": 57,
+          "Dislike": 36
+        },
+        {
+          "Title": "painting work of building, room, varendah. repairing work of window. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 99,
+          "Like": 56,
+          "Dislike": 67
+        },
+        {
+          "Title": "contract of canteen counter, college canteen. ( hindi image)",
+          "Location": "Haryana, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 100,
+          "Like": 46,
+          "Dislike": 35
+        },
+        {
+          "Title": "upgradation of library at tappal. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 101,
+          "Like": 95,
+          "Dislike": 94
+        },
+        {
+          "Title": "supply of cemented bench as per document attached",
+          "Location": "Haryana, India",
+          "Price": "40 Thousand",
+          "Deadline": "Before24Days30-08-2022",
+          "key": 102,
+          "Like": 83,
+          "Dislike": 41
+        },
+        {
+          "Title": "supply of sports items. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 103,
+          "Like": 90,
+          "Dislike": 45
+        },
+        {
+          "Title": "providing of manpower - computer operator, laboratory attendant, security guard, sweeper, gardener. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 104,
+          "Like": 38,
+          "Dislike": 34
+        },
+        {
+          "Title": "supply of classroom chairs",
+          "Location": "Haryana, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before24Days30-08-2022",
+          "key": 105,
+          "Like": 55,
+          "Dislike": 73
+        },
+        {
+          "Title": "supply of sports item. (hindi image)",
+          "Location": "Chhattisgarh, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 106,
+          "Like": 68,
+          "Dislike": 91
+        },
+        {
+          "Title": "providing of services – washer man for college hostel, channa kulcha rehri, college canteen, std, fax, photostat, tuck shop, cobbler services.",
+          "Location": "Chandigarh, India",
+          "Price": "10 Crore",
+          "Deadline": "Before25Days29-08-2022",
+          "key": 107,
+          "Like": 45,
+          "Dislike": 92
+        },
+        {
+          "Title": "purchase of sports items - badminton racket yonex muscle power, badminton shuttlecock yonex mavis nylon, badminton net gupta nylon superior, table-tennis racket gki kung fu dx, table-tennis ball gki kung fu one star, football nevia shining star, volleyball nevia one piece sport volley, volleyball nevia pu, volleyball net gupta nylon limca, chess board set large, carom board regular, cricket bat, cricket ball, cricket stump wooden, cricket stump plastic with bails, wicket keeper gloves sg club, w.....",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 108,
+          "Like": 97,
+          "Dislike": 75
+        },
+        {
+          "Title": "supply of classroom tables",
+          "Location": "Haryana, India",
+          "Price": "20 Crore",
+          "Deadline": "Before25Days29-08-2022",
+          "key": 109,
+          "Like": 96,
+          "Dislike": 95
+        },
+        {
+          "Title": "quotation calling for chemicals in civil department- ph 4,7,9.2 buffer solution, zinc sulphate, sodium hydroxide, potassium sodium tartarate, phenolphthalein solution, methyl orange indicator solution, ammonium chloride, ferrous ammonium sulphate, ammonium chloride, nitric acid, aluminium metal powder,.",
+          "Location": "Maharashtra, India",
+          "Price": "40 Crore",
+          "Deadline": "Before25Days29-08-2022",
+          "key": 110,
+          "Like": 99,
+          "Dislike": 92
+        },
+        {
+          "Title": "making ofintroductory letter with cover for student. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 111,
+          "Like": 81,
+          "Dislike": 89
+        },
+        {
+          "Title": "contract for running of canteen. (marathi image)",
+          "Location": "Maharashtra, India",
+          "Price": "20 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 112,
+          "Like": 83,
+          "Dislike": 97
+        },
+        {
+          "Title": "operation of canteen. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 113,
+          "Like": 96,
+          "Dislike": 54
+        },
+        {
+          "Title": "contract of canteen/ cyber cafe.( hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 114,
+          "Like": 87,
+          "Dislike": 49
+        },
+        {
+          "Title": "supply ofcalling for battery pack",
+          "Location": "Maharashtra, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before30Days24-08-2022",
+          "key": 115,
+          "Like": 34,
+          "Dislike": 97
+        },
+        {
+          "Title": "providing and fixing of window glass all over in college campus.",
+          "Location": "Maharashtra, India",
+          "Price": "50 Thousand",
+          "Deadline": "Before30Days24-08-2022",
+          "key": 116,
+          "Like": 57,
+          "Dislike": 37
+        },
+        {
+          "Title": "supplying structural steel for providing second entrance to auditorium at gce.",
+          "Location": "Maharashtra, India",
+          "Price": "20 Crore",
+          "Deadline": "Before30Days24-08-2022",
+          "key": 117,
+          "Like": 53,
+          "Dislike": 77
+        },
+        {
+          "Title": "purchase of cnc vertical milling machine centre for manufacturing technology lab of mechanical engg department",
+          "Location": "Kerala, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before30Days24-08-2022",
+          "key": 118,
+          "Like": 73,
+          "Dislike": 72
+        },
+        {
+          "Title": "auction sale of unused/ scrap item. ( hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 119,
+          "Like": 44,
+          "Dislike": 41
+        },
+        {
+          "Title": "providing seating otta near hostel b",
+          "Location": "Maharashtra, India",
+          "Price": "90 Crore",
+          "Deadline": "Before31Days23-08-2022",
+          "key": 120,
+          "Like": 48,
+          "Dislike": 41
+        },
+        {
+          "Title": "calling for constructing carry in and main gate pavers.",
+          "Location": "Maharashtra, India",
+          "Price": "50 Crore",
+          "Deadline": "Before31Days23-08-2022",
+          "key": 121,
+          "Like": 73,
+          "Dislike": 99
+        },
+        {
+          "Title": "providing shed for canteen",
+          "Location": "Maharashtra, India",
+          "Price": "40 Thousand",
+          "Deadline": "Before31Days23-08-2022",
+          "key": 122,
+          "Like": 91,
+          "Dislike": 44
+        },
+        {
+          "Title": "plaster work, tiles work, painting, electrical, water proof fiber seat/ partition and other work, new block building , roof brikova, water proofing, water harvesting, roof boundary , shed work, dismantling of damaged jine, construction/ repair of new jine, civil work. ( hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 123,
+          "Like": 35,
+          "Dislike": 69
+        },
+        {
+          "Title": "supply of equipment for the department of physics- supply with demonstration of the apparatus for the experiments mentioned in the following table",
+          "Location": "West Bengal, India",
+          "Price": "20 Thousand",
+          "Deadline": "Before32Days22-08-2022",
+          "key": 124,
+          "Like": 99,
+          "Dislike": 34
+        },
+        {
+          "Title": "printing work of diary, college magazine, scholarship form, introductory letter, latter pad, printing item, office stationery work. ( hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "40 Crore",
+          "Deadline": "ReferDocument",
+          "key": 125,
+          "Like": 33,
+          "Dislike": 68
+        },
+        {
+          "Title": "auction contract for dismantling of building. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "20 Crore",
+          "Deadline": "ReferDocument",
+          "key": 126,
+          "Like": 51,
+          "Dislike": 93
+        },
+        {
+          "Title": "tender notice for supplying of books to library",
+          "Location": "Orissa, India",
+          "Price": "10 Crore",
+          "Deadline": "Before35Days19-08-2022",
+          "key": 127,
+          "Like": 59,
+          "Dislike": 81
+        },
+        {
+          "Title": "for the college mess contract & college canteen contract.",
+          "Location": "Chandigarh, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 128,
+          "Like": 80,
+          "Dislike": 71
+        },
+        {
+          "Title": "repair / maintenance of ro water system (industrial version) (with 80 l colling storage, repair / maintenance of ro water system (without cooler)",
+          "Location": "West Bengal, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before36Days18-08-2022",
+          "key": 129,
+          "Like": 99,
+          "Dislike": 78
+        },
+        {
+          "Title": "supply of inverter, battery",
+          "Location": "Maharashtra, India",
+          "Price": "70 Crore",
+          "Deadline": "Before36Days18-08-2022",
+          "key": 130,
+          "Like": 44,
+          "Dislike": 42
+        },
+        {
+          "Title": "supply and erection of cables required for hostel- 1) 3.5 core aluminium cable 95 sq. mm 80 mtr, 2) 3.5 core aluminium cable 70 sq. mm140 mtr., 3)3.5 core aluminium cable 95sq. mm 100 mtr. 4) labour charges for above material installation work.",
+          "Location": "Maharashtra, India",
+          "Price": "40 Crore",
+          "Deadline": "Before37Days17-08-2022",
+          "key": 131,
+          "Like": 43,
+          "Dislike": 47
+        },
+        {
+          "Title": "supply of total station with simulator",
+          "Location": "Orissa, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before37Days17-08-2022",
+          "key": 132,
+          "Like": 81,
+          "Dislike": 60
+        },
+        {
+          "Title": "supply of sport item. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 133,
+          "Like": 99,
+          "Dislike": 44
+        },
+        {
+          "Title": "supply of stationery and printing material",
+          "Location": "Gujarat, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 134,
+          "Like": 81,
+          "Dislike": 66
+        },
+        {
+          "Title": "tender for college security services and housekeeping services",
+          "Location": "Gujarat, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 135,
+          "Like": 51,
+          "Dislike": 57
+        },
+        {
+          "Title": "supply of cieling fan,wall fan,street light (boq for electrical items)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Crore",
+          "Deadline": "Before39Days15-08-2022",
+          "key": 136,
+          "Like": 94,
+          "Dislike": 56
+        },
+        {
+          "Title": "allotment of shop/ sites. ( hindi image)",
+          "Location": "Chandigarh, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 137,
+          "Like": 92,
+          "Dislike": 68
+        },
+        {
+          "Title": "tender are invited reputed and registered service providers for cleaning of over head and underground water tanks.",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 138,
+          "Like": 65,
+          "Dislike": 63
+        },
+        {
+          "Title": "supplying of books / journals / periodicals for library.",
+          "Location": "Orissa, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 139,
+          "Like": 98,
+          "Dislike": 80
+        },
+        {
+          "Title": "supply of chemical and glassware items",
+          "Location": "Gujarat, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 140,
+          "Like": 88,
+          "Dislike": 53
+        },
+        {
+          "Title": "supply of equipment / material in university . ( hindi image)",
+          "Location": "Bihar, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 141,
+          "Like": 80,
+          "Dislike": 93
+        },
+        {
+          "Title": "providing of security guard .(hindi image)",
+          "Location": "Bihar, India",
+          "Price": "50 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 142,
+          "Like": 92,
+          "Dislike": 53
+        },
+        {
+          "Title": "upgradation of ardarsh laboratory. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 143,
+          "Like": 97,
+          "Dislike": 70
+        },
+        {
+          "Title": "operation of canteen. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 144,
+          "Like": 78,
+          "Dislike": 39
+        },
+        {
+          "Title": "quotation calling for transport facility.",
+          "Location": "Maharashtra, India",
+          "Price": "50 Crore",
+          "Deadline": "Before42Days12-08-2022",
+          "key": 145,
+          "Like": 77,
+          "Dislike": 77
+        },
+        {
+          "Title": "library automization work, chowkidar guard work. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 146,
+          "Like": 32,
+          "Dislike": 99
+        },
+        {
+          "Title": "operation of mess. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 147,
+          "Like": 97,
+          "Dislike": 77
+        },
+        {
+          "Title": "quotation calling for providing plinth protection at jijau hostel",
+          "Location": "Maharashtra, India",
+          "Price": "40 Crore",
+          "Deadline": "Before43Days11-08-2022",
+          "key": 148,
+          "Like": 40,
+          "Dislike": 74
+        },
+        {
+          "Title": "supplying labours for various works - mason skilled, labour for excavation, tree cutter, mali, mistry skilled- supervisor.",
+          "Location": "Maharashtra, India",
+          "Price": "40 Crore",
+          "Deadline": "Before43Days11-08-2022",
+          "key": 149,
+          "Like": 45,
+          "Dislike": 58
+        },
+        {
+          "Title": "supply of magnetic strirrer with hot plate , hot air oven stainless steel , ph meter , digital tds meter , water and soil testing analysis kit , digital colony counter , gel electophorosis unit with power supply horizontal , water bath double wall 6 holes stainless steel , rotatory microtome with accessories , autoclave vertical cap 50lt , distillation apparatus single distillation capacity 3lt , distillation apparatus double distillation capacity 5lt , laminar air flow horizontal , colorimeter .....",
+          "Location": "Madhya Pradesh, India",
+          "Price": "80 Crore",
+          "Deadline": "Before43Days11-08-2022",
+          "key": 150,
+          "Like": 96,
+          "Dislike": 48
+        },
+        {
+          "Title": "supply of laboratory equipment. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "20 Crore",
+          "Deadline": "ReferDocument",
+          "key": 151,
+          "Like": 65,
+          "Dislike": 60
+        },
+        {
+          "Title": "quotation calling for painting material- tractor emulsion advanced, apex base / white emulsion, exterior primer, apco smoke grey, apco sandstone, apco black,wall putty, plater, yelow oxide stainer, fast blue stainer, fast orange stainer, roller, brush, water paper, patra, raw sienna / burnt sienna / amber sienna, water paper, sealer, simple polish, machine colourant.",
+          "Location": "Maharashtra, India",
+          "Price": "10 Crore",
+          "Deadline": "Before43Days11-08-2022",
+          "key": 152,
+          "Like": 67,
+          "Dislike": 33
+        },
+        {
+          "Title": "purchase of medicinal chemistry laboratory - tlc uv chamber (254nm short wavelength , 365nm long wavelength), hot air gun 2000w lcd electric heat guns adjustable heat dryer hair dryer, chiller for rotary evaporator 300 series, ice making machine (50kg), -80 degree deep freezer, servo controlled voltage stabilizer, sensor for oil bath with oil bath, anti-dust fashion prevention gas mask painting for full face facepiece respirator, fume hood with motor, chromatography columns with sintered disc & .....",
+          "Location": "Tamil Nadu, India",
+          "Price": "20 Crore",
+          "Deadline": "Before44Days10-08-2022",
+          "key": 153,
+          "Like": 89,
+          "Dislike": 44
+        },
+        {
+          "Title": "supply of calling for chemicals in civil dept_ ph 4 buffer solution, ph 7 buffer solution, zinc sulphate, silver nitrate, sodium chloride.",
+          "Location": "Maharashtra, India",
+          "Price": "80 Crore",
+          "Deadline": "Before44Days10-08-2022",
+          "key": 154,
+          "Like": 66,
+          "Dislike": 99
+        },
+        {
+          "Title": "supply of aluminum ladder, hammer drill machine",
+          "Location": "Maharashtra, India",
+          "Price": "10 Thousand",
+          "Deadline": "Before44Days10-08-2022",
+          "key": 155,
+          "Like": 36,
+          "Dislike": 37
+        },
+        {
+          "Title": "supply of items: aluminium ladder 10 ft folding, aluminum ladder 15 ft folding, hammer drill machine 10 mm.",
+          "Location": "Maharashtra, India",
+          "Price": "60 Thousand",
+          "Deadline": "Before44Days10-08-2022",
+          "key": 156,
+          "Like": 32,
+          "Dislike": 36
+        },
+        {
+          "Title": "operation of canteen. (hindi image)",
+          "Location": "Himachal Pradesh, India",
+          "Price": "70 Crore",
+          "Deadline": "ReferDocument",
+          "key": 157,
+          "Like": 37,
+          "Dislike": 65
+        },
+        {
+          "Title": "calling for material in mechanical engineering department",
+          "Location": "Maharashtra, India",
+          "Price": "50 Thousand",
+          "Deadline": "Before44Days10-08-2022",
+          "key": 158,
+          "Like": 62,
+          "Dislike": 55
+        },
+        {
+          "Title": "supply of sports item. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "80 Crore",
+          "Deadline": "ReferDocument",
+          "key": 159,
+          "Like": 58,
+          "Dislike": 34
+        },
+        {
+          "Title": "supply of for garden fencing items for 1. 2.88 mm diameter, 3” x 3” square net, 4 ft breadth (rate per 100 ft. bundle is to be quoted) 2. 2.88 mm diameter, 3” x 3” square net, 3 ft breadth (rate per 100 ft. bundle is to be quoted) 3. 1” x 1” angle (rate per kg to be quoted) 4. 1” x 1.5” angle (rate per kg to be quoted) 5. 18mm x 5 mm iron pati (rate per kg to be quoted)",
+          "Location": "West Bengal, India",
+          "Price": "80 Crore",
+          "Deadline": "Before46Days08-08-2022",
+          "key": 160,
+          "Like": 64,
+          "Dislike": 59
+        },
+        {
+          "Title": "supply of stationery, printing, sports item, toner refill and computer maintenance, manpower service, repair of water cooler/ro, tent, barricating, light, sound, repair of electrical equipment. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 161,
+          "Like": 67,
+          "Dislike": 88
+        },
+        {
+          "Title": "supply of lab equipment, material. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 162,
+          "Like": 82,
+          "Dislike": 85
+        },
+        {
+          "Title": "auction sale of tree. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 163,
+          "Like": 79,
+          "Dislike": 80
+        },
+        {
+          "Title": "extension for invitation of quotation for cisco webex educational for 100 user.",
+          "Location": "Maharashtra, India",
+          "Price": "60 Thousand",
+          "Deadline": "Before48Days06-08-2022",
+          "key": 164,
+          "Like": 62,
+          "Dislike": 57
+        },
+        {
+          "Title": "renovation and repair of toiletry front elevation, ramp, window, pipeline. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 165,
+          "Like": 39,
+          "Dislike": 99
+        },
+        {
+          "Title": "e-tender notice/college of forestry, dapoli/agarbatti makig unit (bamboo slicer machine (heavy-duty), agarbatti coating machine (fully automatic) bamboo round stick making machine)_",
+          "Location": "Maharashtra, India",
+          "Price": "50 Crore",
+          "Deadline": "Before48Days06-08-2022",
+          "key": 166,
+          "Like": 52,
+          "Dislike": 75
+        },
+        {
+          "Title": "extension of quotation acceptance due date cisco webex educational for 100 user",
+          "Location": "Maharashtra, India",
+          "Price": "40 Thousand",
+          "Deadline": "Before48Days06-08-2022",
+          "key": 167,
+          "Like": 72,
+          "Dislike": 37
+        },
+        {
+          "Title": "supply of sports uniforms for use of the students of govt. college of physical education during the session of 2021-23 batch.",
+          "Location": "Orissa, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 168,
+          "Like": 86,
+          "Dislike": 30
+        },
+        {
+          "Title": "cutting & auction sale of trees. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 169,
+          "Like": 92,
+          "Dislike": 57
+        },
+        {
+          "Title": "supply of aio i3 24inch 12gen 8gb window+ office, electronic podium",
+          "Location": "Madhya Pradesh, India",
+          "Price": "50 Crore",
+          "Deadline": "Before48Days06-08-2022",
+          "key": 170,
+          "Like": 38,
+          "Dislike": 89
+        },
+        {
+          "Title": "supply of books. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "90 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 171,
+          "Like": 72,
+          "Dislike": 64
+        },
+        {
+          "Title": "upgradation of library. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "10 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 172,
+          "Like": 59,
+          "Dislike": 72
+        },
+        {
+          "Title": "purchase of hlp 68 hydraulic oil in sealed pack",
+          "Location": "Tamil Nadu, India",
+          "Price": "70 Crore",
+          "Deadline": "Before50Days04-08-2022",
+          "key": 173,
+          "Like": 47,
+          "Dislike": 78
+        },
+        {
+          "Title": "supply of sports items for sports department. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 174,
+          "Like": 53,
+          "Dislike": 66
+        },
+        {
+          "Title": "supply of book.",
+          "Location": "Chhattisgarh, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 175,
+          "Like": 68,
+          "Dislike": 47
+        },
+        {
+          "Title": "providing of catering service. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "70 Crore",
+          "Deadline": "ReferDocument",
+          "key": 176,
+          "Like": 37,
+          "Dislike": 83
+        },
+        {
+          "Title": "1). leveling of tractorized surface by way of engaging tractor with leveler including cost of pol camp 2). supply of fixing of turf grass (slaps) including leveling of subbase and filling of joints bu good earth in fertilization, watering and maintenance of green paths 3). top dressing of turf grass by way of mixing good earth screened with screened sand in 3;1 ratio incl. leveling of same.",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 177,
+          "Like": 72,
+          "Dislike": 68
+        },
+        {
+          "Title": "supply of computer, ups, sound system, projector",
+          "Location": "Madhya Pradesh, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before50Days04-08-2022",
+          "key": 178,
+          "Like": 31,
+          "Dislike": 87
+        },
+        {
+          "Title": "supply of galvanized steel sheets as per is 277",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "80 Thousand",
+          "Deadline": "Before50Days04-08-2022",
+          "key": 179,
+          "Like": 42,
+          "Dislike": 58
+        },
+        {
+          "Title": "contract for operation of canteen /jalpan gruh in samrat prithviraj chauhan government college. (hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "30 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 180,
+          "Like": 35,
+          "Dislike": 76
+        },
+        {
+          "Title": "supply books. (hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "30 Crore",
+          "Deadline": "ReferDocument",
+          "key": 181,
+          "Like": 62,
+          "Dislike": 54
+        },
+        {
+          "Title": "firms for running of canteen in the campus of government degree college for women.",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "20 Crore",
+          "Deadline": "ReferDocument",
+          "key": 182,
+          "Like": 62,
+          "Dislike": 81
+        },
+        {
+          "Title": "purchase of batteries (buy back)",
+          "Location": "Tamil Nadu, India",
+          "Price": "20 Crore",
+          "Deadline": "Before52Days02-08-2022",
+          "key": 183,
+          "Like": 83,
+          "Dislike": 48
+        },
+        {
+          "Title": "for fencing for protecting plantations- 1. 18 mm x 5 mm iron pati (rate per kg to be quoted) 2. 1” x 1.5” square net, breadth 4’, (rate per sq. ft./ rate per bundle to be quoted) 3. 2” x 2” square net, breadth 4’, (rate per sq. ft./ rate per bundle to be quoted)",
+          "Location": "West Bengal, India",
+          "Price": "10 Thousand",
+          "Deadline": "Before52Days02-08-2022",
+          "key": 184,
+          "Like": 34,
+          "Dislike": 87
+        },
+        {
+          "Title": "supply of equipment for brajranja gar college.",
+          "Location": "Orissa, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 185,
+          "Like": 39,
+          "Dislike": 54
+        },
+        {
+          "Title": "quotation for sound system & electrical equipment- universal horn with complete box, perforated zip board with aluminium structure finish including fitting fixing and painting of the said.",
+          "Location": "West Bengal, India",
+          "Price": "20 Crore",
+          "Deadline": "Before53Days01-08-2022",
+          "key": 186,
+          "Like": 47,
+          "Dislike": 89
+        },
+        {
+          "Title": "printing work of admission application register. ( hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "80 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 187,
+          "Like": 94,
+          "Dislike": 92
+        },
+        {
+          "Title": "providing of manpower service. (marathi image)",
+          "Location": "Maharashtra, India",
+          "Price": "70 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 188,
+          "Like": 57,
+          "Dislike": 54
+        },
+        {
+          "Title": "supply of books. ( hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "70 Thousand",
+          "Deadline": "Before55Days30-07-2022",
+          "key": 189,
+          "Like": 76,
+          "Dislike": 64
+        },
+        {
+          "Title": "providing of manpower, computer operator, sweeper, security guard. ( hindi image)",
+          "Location": "Rajasthan, India",
+          "Price": "10 Crore",
+          "Deadline": "ReferDocument",
+          "key": 190,
+          "Like": 85,
+          "Dislike": 86
+        },
+        {
+          "Title": "supply of printer,photo copy machine",
+          "Location": "Madhya Pradesh, India",
+          "Price": "10 Thousand",
+          "Deadline": "Before56Days29-07-2022",
+          "key": 191,
+          "Like": 95,
+          "Dislike": 81
+        },
+        {
+          "Title": "auction sale of agriculture land. (hindi image)",
+          "Location": "Uttar Pradesh, India",
+          "Price": "40 Thousand",
+          "Deadline": "ReferDocument",
+          "key": 192,
+          "Like": 72,
+          "Dislike": 79
+        },
+        {
+          "Title": "quotation calling to provide plinth protection at f quarter",
+          "Location": "Maharashtra, India",
+          "Price": "70 Thousand",
+          "Deadline": "Before57Days28-07-2022",
+          "key": 193,
+          "Like": 42,
+          "Dislike": 64
+        },
+        {
+          "Title": "removing rain water in front in jijau mess by constructing drainage gutter at gce.",
+          "Location": "Maharashtra, India",
+          "Price": "30 Thousand",
+          "Deadline": "Before57Days28-07-2022",
+          "key": 194,
+          "Like": 37,
+          "Dislike": 63
+        },
+        {
+          "Title": "dismantling of classic room and removal of malba. ( hindi image)",
+          "Location": "Uttarakhand, India",
+          "Price": "90 Crore",
+          "Deadline": "ReferDocument",
+          "key": 195,
+          "Like": 64,
+          "Dislike": 83
+        },
+        {
+          "Title": "supply of realtime t502l,realtime t501 mini.",
+          "Location": "Jammu And Kashmir, India",
+          "Price": "20 Thousand",
+          "Deadline": "Before57Days28-07-2022",
+          "key": 196,
+          "Like": 40,
+          "Dislike": 75
+        },
+        {
+          "Title": "recall for tender inviting for elevators at metallurgy workshop mechanical drawing hall and 3d laboratory production engineering department coep",
+          "Location": "Maharashtra, India",
+          "Price": "30 Crore",
+          "Deadline": "Before58Days27-07-2022",
+          "key": 197,
+          "Like": 61,
+          "Dislike": 62
+        },
+        {
+          "Title": "supply of sports items. (hindi image)",
+          "Location": "Madhya Pradesh, India",
+          "Price": "60 Crore",
+          "Deadline": "ReferDocument",
+          "key": 198,
+          "Like": 51,
+          "Dislike": 97
+        },
+        {
+          "Title": "operation of cycle/ vehicle stand. ( hindi image)",
+          "Location": "Chhattisgarh, India",
+          "Price": "50 Crore",
+          "Deadline": "ReferDocument",
+          "key": 199,
+          "Like": 77,
+          "Dislike": 45
+        }
+      ]
+    }]
+
+    creat_card(tables)
+
+    function creat_card(data) {
+      var table = document.getElementById("cards");
+
+
+      for (var i = 0; i < data['0']['Tender'].length; i++) {
+        var randomImage = new Array();
+
+        //insert the URL of images in array  
+        randomImage[0] = "https://source.unsplash.com/200x200/?company,office";
+        randomImage[1] = "https://source.unsplash.com/200x200/?company,tenders";
+        randomImage[2] = "https://source.unsplash.com/200x200/?company,building";
+        randomImage[3] = "https://source.unsplash.com/200x200/?office,furniture";
+        randomImage[4] = "https://source.unsplash.com/200x200/?logo,furniture";
+        randomImage[5] = "https://source.unsplash.com/200x200/?college";
+        //generate a number and provide to the image to generate randomly  
+        var number = Math.floor(Math.random() * randomImage.length);
+
+        var f = String(i);
+        console.log(typeof ('0'));
+        var card = `
+        <div class="card mb-3" style="max-width: 750px;" id="tr">
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="row g-0">
+              <div class="col-md-3">
+                  <img src="${randomImage[number]}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body" style="padding : 16px">
+                  <div><h5 class="card-title">${"TN - " + data['0']['Tender'][i].key}</h5><span class="badge text-bg-success">${data['0']['Tender'][i].Like}% 😀</span>&nbsp;<span class="badge text-bg-danger">${data['0']['Tender'][i].Dislike}% 😒</span></div>
+                  <p class="card-text" style="padding-top : 8px">${data['0']['Tender'][i].Title.slice(0, 100) + "..."}</p>
+                  <p class="card-text"><small class="text-muted"><ion-icon name="location-outline"></ion-icon>${data['0']['Tender'][i].Location}</small></p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-body" style="padding : 16px">
+                  <div><h5 class="card-title">INR <br>${data['0']['Tender'][i].Price}</h5></div>
+                </div>
+              </div>
+            </div>
+          </a>
+      </div>
+        `
+        table.innerHTML += card
+      }
+
+
+    }
+  </script>
+  {% block javascript %}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+
+    const btn = document.querySelector('#submit');
+    const form = document.querySelector('#sub');
+    function modal() {
+      const myModal = document.getElementById('myModal')
+      const myInput = document.getElementById('myInput')
+
+      myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+      })
+    }
+    /*
+        btn.addEventListener('click', (e) => {
+        // prevent the form from submitting
+        e.preventDefault();
     
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
-        </div>
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
-        </div>
-    
-        <hr class="featurette-divider">
-    
-        <!-- /END THE FEATURETTES -->
-    
-      </div><!-- /.container -->
-    
-    
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>© 2017–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-      </footer>
-    </main>
-    
-    
-        <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    
-          
-      
-    
-    <quillbot-extension-portal></quillbot-extension-portal></body>
+        // show the form values
+        const formData = new FormData(form);
+        const values = [...formData.entries()];
+        console.log(values);
+        function answer(){
+          $.ajax({
+            type: 'GET',
+            url: 'edit_lists',
+            data: values,
+            success: function (data) {
+                // any process in data
+                alert("successfull")
+            },
+            failure: function () {
+                alert("failure");
+            }
+        });
+        
+    });
+    */
+    $(document).ready(function () {
+      $(btn).click(function () {
+        const formData = new FormData(form);
+        const values = [...formData.entries()];
+        
+        $.ajax({
+            type: 'GET',
+            url: '',
+            data: {answer : values},
+            success: function (data) {
+                // any process in data
+                alert("successfull")
+            },
+            failure: function () {
+                alert("failure");
+            }
+        });
+      })
+    })
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  {% endblock javascript %}
+</body>
+
 </html>

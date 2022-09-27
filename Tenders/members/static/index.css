@@ -1,0 +1,29 @@
+body{
+    margin : 0px;
+    padding : 0px;
+    background-color : #F4F5F7;
+    overflow-x: hidden;
+}
+
+.container-sm{
+    margin-top: 26px;
+    
+}
+
+#tr:hover{
+    
+        transform:scale(0.9);
+        text-decoration: none;
+        
+}
+.float{
+    background-color: #fff;
+    height: 50px;
+}
+.col-7{
+    margin-top: 5px;
+}
+.btn{
+    border-radius: 40px;
+}
+
