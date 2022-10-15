@@ -131,9 +131,9 @@ You7:28 PM
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      
-        <div class="modal-content p-3">
-          <form id="sub">
+
+      <div class="modal-content p-3">
+        <form id="sub">
           <div class="modal-header border-bottom-0">
             <h5 class="modal-title">Filter</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -171,7 +171,7 @@ You7:28 PM
                         <option selected>-select-</option>
                         <option value="Maharashtra">Maharashtra</option>
                         <option value="Madhya pradesh">Madhya pradesh</option>
-                        <option value="Uttar pradesh">Uttar pradesh</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
                       </select>
                     </div>
                     <p class="h5">
@@ -206,10 +206,14 @@ You7:28 PM
                   <button class="nav-link m-2" id="v-pills-settings-tab" data-bs-toggle="pill"
                     data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
                     aria-selected="false">Turnover</button>
-                  <!--<button class="nav-link m-2" id="v-pills-settings-tab" data-bs-toggle="pill"
+                  <button class="nav-link m-2" id="v-pills-fixed-tab" data-bs-toggle="pill"
                     data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
-                    aria-selected="false">Deadline</button>
-                  -->
+                    aria-selected="false">Fixed</button>
+                  <button class="nav-link m-2" id="v-pills-sale-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">Sale</button>
+
+
                 </div>
 
 
@@ -230,8 +234,8 @@ You7:28 PM
 
                   <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                     <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-                      value="2" checked="">
-                    <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
+                      value="2">
+                    <div style="width: 200px; margin-right: 200px; margin-left:5px">
                       Quality
                     </div>
                     <ion-icon name="star" style="color:#FFB801;font-size:25px"></ion-icon>
@@ -244,7 +248,7 @@ You7:28 PM
                   </a>
                   <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                     <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-                      value="2.5" checked="">
+                      value="2.5">
                     <div class="opacity-50" style="width: 200px; margin-right: 192px; margin-left:5px">
                       Durability
                     </div>
@@ -258,7 +262,7 @@ You7:28 PM
                   </a>
                   <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                     <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-                      value="4" checked="">
+                      value="4">
                     <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
                       Cost
                     </div>
@@ -305,31 +309,31 @@ You7:28 PM
                 </p>
                 <div class="list-group mx-0 w-auto">
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="default" checked=""
-                      name="listGroupRadio" id="listGroupRadios1">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="default" checked="" name="Trange"
+                      id="listGroupRadios1">
                     <span>
                       Default
 
                     </span>
                   </label>
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="50" checked=""
-                      name="listGroupRadio" id="listGroupRadios1">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="50000" name="Trange"
+                      id="listGroupRadios1">
                     <span>
                       Below 50,000
 
                     </span>
                   </label>
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="50-80" checked="50-80"
-                      name="listGroupRadio" id="listGroupRadios1">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="50000-80000" name="Trange"
+                      id="listGroupRadios1">
                     <span>
                       50,000 - 80,000
 
                     </span>
                   </label>
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="80-5000" name="listGroupRadio"
+                    <input class="form-check-input flex-shrink-0" type="radio" value="80000-5000000" name="Trange"
                       id="listGroupRadios1">
                     <span>
                       80,000 - 50,00,000
@@ -337,7 +341,7 @@ You7:28 PM
                     </span>
                   </label>
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="5000-10000" name="listGroupRadio"
+                    <input class="form-check-input flex-shrink-0" type="radio" value="5000000-100000000" name="Trange"
                       id="listGroupRadios1">
                     <span>
                       50,00,000 - 10 crore
@@ -345,7 +349,7 @@ You7:28 PM
                     </span>
                   </label>
                   <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0" type="radio" value="10000" name="listGroupRadio"
+                    <input class="form-check-input flex-shrink-0" type="radio" value="100000000" name="Trange"
                       id="listGroupRadios1">
                     <span>
                       Above 10 crore
@@ -353,7 +357,62 @@ You7:28 PM
                     </span>
                   </label>
                 </div>
+                <!---------------------Fixed Rate-->
+                <p class="lead mt-4">
+                  Fixed Rate
+                </p>
+                <div class="list-group mx-0 w-auto">
+                  <label class="list-group-item d-flex gap-2">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" name="fixed"
+                        id="flexSwitchCheckChecked" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Tenders With fixed rate</label>
+                    </div>
+                  </label>
+                </div>
+                <!----------------------Sale-->
+                <p class="lead mt-4">
+                  Sale
+                </p>
+                <div class="list-group mx-0 w-auto">
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="default" checked name="sale"
+                      id="sale">
+                    <span>
+                      Default
 
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="0-20" name="sale" id="sale">
+                    <span>
+                      0% - 20%
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="20-40" name="sale" id="sale">
+                    <span>
+                      20% - 40%
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="40-60" name="sale" id="sale">
+                    <span>
+                      40% - 60%
+
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" value="60" name="sale" id="sale">
+                    <span>
+                      above 60%
+
+                    </span>
+                  </label>
+
+                </div>
               </div>
 
 
@@ -376,18 +435,27 @@ You7:28 PM
                 </p>
                 <select class="form-select" aria-label="Default select example" name="product_cat">
                   <option selected>-select-</option>
-                  <option value="1">one</option>
-                  <option value="2">two</option>
-                  <option value="3">three</option>
+                  <option value="1">Air Conditioner</option>
+                  <option value="2">Computer-Software</option>
+                  <option value="3">Cabels and Wires</option>
+                  <option value="4">furniture</option>
+                  <option value="5">Food Products</option>
+                  <option value="6">House Keeping</option>
+                  <option value="7">Power energy</option>
+                  <option value="8">Security Systems</option>
                 </select>
                 <p class="h6 mt-2">
                   Tender Expire
                 </p>
                 <select class="form-select" aria-label="Default select example" name="Deadline">
                   <option selected>-select-</option>
-                  <option value="1">one</option>
-                  <option value="2">two</option>
-                  <option value="3">three</option>
+                  <option value="Today">Closing Today</option>
+                  <option value="Tomorrow">Closing Tomorrow</option>
+                  <option value="7">Closing within 7 days</option>
+                  <option value="15">Closing within 15 days</option>
+                  <option value="30">Closing within 30 days</option>
+                  <option value="60">Closing within 60 days</option>
+                  <option value="60+">Closing greater than 60 days</option>
                 </select>
 
               </div>
@@ -400,16 +468,16 @@ You7:28 PM
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
               style="border-radius: 5px;">Close</button>
 
-            <button type="submit" class="btn btn-outline-success" style="border-radius: 5px;" id="submit" value="submit"><svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill"
-                viewBox="0 0 16 16">
+            <button type="submit" class="btn btn-outline-success" style="border-radius: 5px;" id="submit"
+              value="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-funnel-fill" viewBox="0 0 16 16">
                 <path
                   d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
               </svg> Apply Filter</button>
           </div>
         </form>
-        </div>
-     
+      </div>
+
     </div>
   </div>
   <div class="container-sm">
@@ -451,13 +519,13 @@ You7:28 PM
     onValue(starCountRef, (snapshot) => {
       data = snapshot.val();
       creat_card(data)
-      
+
     });
 
     const btn = document.querySelector('#submit');
     const form = document.querySelector('#sub');
     let ans;
-    
+
     function modal() {
       const myModal = document.getElementById('myModal')
       const myInput = document.getElementById('myInput')
@@ -474,28 +542,92 @@ You7:28 PM
         console.log(pair[0] + ": " + pair[1]);
       }
 
-       ans = Object.fromEntries(formData);
+      ans = Object.fromEntries(formData);
 
-       sorting(data,ans);
+      sorting(data, ans);
 
     }
 
     document.getElementById("sub").addEventListener("submit", function (event) {
       event.preventDefault();
       getData(event.target);
-      
+
     });
-    
-    function sorting(data,ans){
+
+    function sorting(data, ans) {
       const s = []
-      
-      for (var i = 0; i < data.length; i++) {
-      if ((data[i]['Location'] == ans['state']+", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing'])){
-        s.push(data[i])
+      let rate;
+      if (ans['fixed'] == undefined) {
+        rate = "off";
       }
+      else {
+        rate = "on";
+      }
+      for (var i = 0; i < data.length; i++) {
+
+
+        if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing']) & (data[i]['Trange'] == ans['Trange'] & ans['Trange'] != 'default') & ((data[i]['Fixed Rate'].toLowerCase()) == rate)) {
+          s.push(data[i])
+          console.log("a")
+        }
+        else if ((ans['state'] == "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing']) & (data[i]['Trange'] == ans['Trange'] & ans['Trange'] != 'default') & ((data[i]['Fixed Rate'].toLowerCase()) == rate)) {
+          s.push(data[i])
+          console.log("b")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (ans['rating'] == 'default') & (data[i]['listing'] == ans['listing']) & (data[i]['Trange'] == ans['Trange'] & ans['Trange'] != 'default') & ((data[i]['Fixed Rate'].toLowerCase()) == rate)) {
+          s.push(data[i])
+          console.log("c")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing']) & (ans['Trange'] == 'default') & ((data[i]['Fixed Rate'].toLowerCase()) == "off")) {
+          s.push(data[i])
+          console.log("d")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (ans['rating'] == 'default') & (ans['Trange'] == 'default')) {
+          s.push(data[i])
+          console.log("e")
+        }
+        else if ((data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (ans['state'] == "-select-") & (ans['Trange'] == 'default')) {
+          s.push(data[i])
+          console.log("f")
+        }
+        else if ((data[i]['Trange'] == ans['Trange'] & ans['Trange'] != 'default') & (data[i]['listing'] == ans['listing']) & (ans['rating'] == 'default')) {
+          s.push(data[i])
+          console.log("g")
+        }
+        else if (((data[i]['Fixed Rate'].toLowerCase()) == rate) & (ans['state'] == "-select-") & (ans['rating'] == 'default') & (ans['Trange'] == 'default')) {
+          s.push(data[i])
+          console.log("h")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default')) {
+          s.push(data[i])
+          console.log("i")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing'])) {
+          s.push(data[i])
+          console.log("j")
+        }
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing']) & (data[i]['Trange'] == ans['Trange'] & ans['Trange'] != 'default')) {
+          s.push(data[i])
+          console.log("k")
+        }
+
       }
       var table = document.getElementById("cards");
       table.innerHTML = "";
+      let rating_max = 0;
+      let price_min = 99999;
+      let key1, key2;
+      for (var i = 0; i < s.length; i++) {
+        if (s[i]['Price'] < price_min) {
+          key1 = s[i]['key'];
+          price_min = s[i]['Price'];
+        }
+        if (s[i]['rating'] > rating_max) {
+          key2 = s[i]['key'];
+          rating_max = s[i]['rating'];
+        }
+      }
+      console.log(key1, key2);
       creat_card(s);
     }
 
@@ -523,7 +655,7 @@ You7:28 PM
 
         var f = String(i);
         console.log(typeof (i));
-         card = `
+        card = `
         <div class="card mb-3" style="max-width: 750px;" id="tr">
           <a href="#" class="list-group-item list-group-item-action">
             <div class="row g-0">
