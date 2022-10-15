@@ -12,7 +12,7 @@ body{
 
 #tr:hover{
     
-        transform:scale(0.9);
+        transform:scale(1.1);
         text-decoration: none;
         
 }
@@ -23,7 +23,5 @@ body{
 .col-7{
     margin-top: 5px;
 }
-.btn{
-    border-radius: 40px;
-}
+
 
