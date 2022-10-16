@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
-{% load static %}
+
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tenders</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css">
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+  <link href="{% static 'index.css'%}" rel="stylesheet" type="text/css">
   <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
+
+
 </head>
 
 
@@ -21,27 +24,28 @@
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <ion-icon name="location-outline"></ion-icon>
-            <use xlink:href="#bootstrap"></use>
-            </svg>
+            <img src="{% static 'logos.png' %}" alt="..." width="60px"
+             />
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="features" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            <li><a href="#" class="nav-link px-2 " style="color:#212529">Home</a></li>
+            <li><a href="features" class="nav-link px-2 " style="color:#212529">Features</a></li>
+            <li><a href="#" class="nav-link px-2 " style="color:#212529">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2"style="color:#212529">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2" style="color:#212529">About</a></li>
           </ul>
 
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Have a question? Ask me" style="width : 366px;" 
               aria-label="Search">
           </form>
 
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+            
+            <button type="button" class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg> Contact Us</button>
           </div>
         </div>
       </div>
@@ -78,55 +82,10 @@ You7:28 PM
       </div>
     </div>
 
-    <div class="card mt-4" style="float:right;width : 650px;margin-top : 10px">
-      <div class="card-body">
-        <h5 class="card-title">Most recent</h5>
-        <!--
-        <div class="tab-pane" id="v-pills-disabled">
-        
-
-        <div class="list-group w-auto">
-
-          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-              value="2" checked="">
-            <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
-              Star Marked
-            </div>
-            <ion-icon name="star" style="color:#FFB801;font-size:25px"></ion-icon>
-           
-
-
-          </a>
-          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-              value="2.5" checked="">
-            <div class="opacity-50" style="width: 200px; margin-right: 196px; margin-left:5px">
-              favorite
-            </div>
-            <ion-icon name="star" style="color:#438FFD;font-size:25px"></ion-icon>
-            
-
-
-          </a>
-          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-            <input class="form-check-input flex-shrink-0" type="radio" name="rating" id="listGroupRadios1"
-              value="4" checked="">
-            <div class="opacity-50" style="width: 200px; margin-right: 200px; margin-left:5px">
-              Cost
-            </div>
-            <ion-icon name="star" style="color:rgb(27, 144, 27);font-size:25px"></ion-icon>
-            
-
-
-          </a>
-        </div>
-
-      </div>-->
-      </div>
-    </div>
+    
 
   </div>
+
   <!-- Modal -->
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -486,6 +445,7 @@ You7:28 PM
 
   </div>
   </div>
+
   <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"></script>
@@ -598,11 +558,11 @@ You7:28 PM
           s.push(data[i])
           console.log("h")
         }
-        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default')) {
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (ans['Trange'] == 'default')) {
           s.push(data[i])
           console.log("i")
         }
-        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing'])) {
+        else if ((data[i]['Location'] == ans['state'] + ", India" & ans['state'] != "-select-") & (data[i]['rating'] == ans['rating'] & ans['rating'] != 'default') & (data[i]['listing'] == ans['listing']) & (ans['Trange'] == 'default')) {
           s.push(data[i])
           console.log("j")
         }
@@ -627,8 +587,24 @@ You7:28 PM
           rating_max = s[i]['rating'];
         }
       }
-      console.log(key1, key2);
-      creat_card(s);
+      console.log(rating_max,price_min);
+      let l = [];
+      if (data[key1]['Price'] >= data[key2]['Price'] & data[key1]['rating'] <= data[key2]['rating']) {
+        l.push(data[key2])
+      }
+      else if (data[key1]['Price'] <= data[key2]['Price'] & data[key1]['rating'] >= data[key2]['rating']) {
+        l.push(data[key1])
+      }
+      else if (data[key1]['Price'] <= data[key2]['Price'] & data[key1]['rating'] <= data[key2]['rating']) {
+        l.push(data[key2])
+      }
+      else if (data[key1]['Price'] >= data[key2]['Price'] & data[key1]['rating'] >= data[key2]['rating']) {
+        l.push(data[key1])
+      }
+
+      console.log(l);
+      console.log(s);
+      creat_card(l);
     }
 
   </script>
@@ -663,15 +639,27 @@ You7:28 PM
                   <img src="${randomImage[number]}" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-6">
-                <div class="card-body" style="padding : 16px">
-                  <div><h5 class="card-title">${"TN - " + data[i].key}</h5><span class="badge text-bg-success">${data[i]['Like']}% 😀</span>&nbsp;<span class="badge text-bg-danger">${data[i]['Dislike']}% 😒</span></div>
-                  <p class="card-text" style="padding-top : 8px">${data[i].Title.slice(0, 100) + "..."}</p>
-                  <p class="card-text"><small class="text-muted"><ion-icon name="location-outline"></ion-icon>${data[i]['Location']}</small></p>
-                </div>
+                <div class="row g-0">
+                  <div class="card-body" style="padding : 16px">
+                    <div><h5 class="card-title">${"TN - " + data[i].key}</h5>
+                    <p class="card-text"><small class="text-muted"><ion-icon name="location-outline"></ion-icon>${data[i]['Location']}</small></p>
+                    <p class="card-text">${data[i].Title.slice(0, 100) + "..."}</p>
+                    <span class="badge text-bg-success">${data[i]['Like']}% 😀</span>&nbsp;<span class="badge text-bg-danger">${data[i]['Dislike']}% 😒</span></div>
+                  </div>
               </div>
+              
+            </div>
               <div class="col-md-3">
-                <div class="card-body" style="padding : 16px">
-                  <div><h5 class="card-title">INR <br>${data[i]['Price']}</h5></div>
+                <div class="Row">
+                  <div class="card-body" style="padding : 12px">
+                    <div><h5 class="card-title">INR ${data[i]['Price'].toFixed(2).replace(/(\d)(?=(\d{2})+\d\.)/g, '$1,')}</h5></div>
+                  </div>
+                </div>
+                <div class="Row">
+                  <div class="card-body" >
+                    <button type="button" class="btn btn-warning" style="font-size: 12.5px">Deadline: ${data[i]['Deadline']}</button>
+                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -681,6 +669,10 @@ You7:28 PM
         table.innerHTML += card
       }
 
+      document.getElementById('tr').addEventListener("click",change);
+      function change(){
+        window.location.replace('test');
+      }
 
     }
 
@@ -689,6 +681,8 @@ You7:28 PM
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
   {% endblock javascript %}
 </body>
